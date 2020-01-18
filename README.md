@@ -1,14 +1,14 @@
 这款社交软件内部包含 即时通讯、图文+视频分享、点赞评论回复等功能
 
-# remusic
-仿网易云音乐安卓版客户端
-![](https://github.com/JackLongma/imap_android/blob/master/1.jpg)
-![](https://github.com/JackLongma/imap_android/blob/master/3.jpg)
-![](https://github.com/JackLongma/imap_android/blob/master/1.jpg)
-![](https://github.com/JackLongma/imap_android/blob/master/3.jpg)
-
-<img width="48%" src="https://github.com/JackLongma/imap_android/blob/master/1.jpg"  alt="显示图片" />
-<img width="48%" src="https://github.com/JackLongma/imap_android/blob/master/3.jpg"  alt="显示图片" />
+#安卓端运行时截图&&录屏：
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/1.jpg"  alt="显示图片" />
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/2.jpg"  alt="显示图片" />
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/3.jpg"  alt="显示图片" />
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/11562773226_.pic.jpg"  alt="显示图片" />
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG.jpg"  alt="显示图片" />
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG3.jpeg"  alt="显示图片" />
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG3.jpg"  alt="显示图片" />
+<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG4.jpeg"  alt="显示图片" />
 
 ![image](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg)
 [![Watch the video](https://imaptest.oss-cn-beijing.aliyuncs.com/show/WechatIMG3.jpg)](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4)
