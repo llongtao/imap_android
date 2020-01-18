@@ -2,6 +2,7 @@
 <br/>
 <br/>
 ##安卓端-录屏视频（点击图片跳转到视频）：
+<br/><br/>
 [![Watch the video](https://github.com/JackLongma/imap_android/blob/master/2.jpg)](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4)
 
 
