@@ -4,11 +4,7 @@
 
 <table border="1">
   <tr>
-    <th width="50%"></th>
-    <th width="50%"></th>
-  </tr>  
-  <tr>
-    <td width='50%'>January</td>
+    <td width='50%'>![image](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg)</td>
     <td width='50%'>$100</td>
   </tr>
 </table>
