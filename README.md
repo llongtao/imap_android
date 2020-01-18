@@ -4,12 +4,8 @@
 
 <table border="1">
   <tr>
-    <th>Month</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$100</td>
+    <td width='50%'>January</td>
+    <td width='50%'>$100</td>
   </tr>
 </table>
 
