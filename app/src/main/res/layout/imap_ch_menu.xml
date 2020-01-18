@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@color/color3"
+                android:layout_height="match_parent">
+  <FrameLayout
+      android:id="@+id/fl_city"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+  </FrameLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            <TextView
+                    android:id="@+id/menu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="#111fff"
+                    android:textSize="25sp"
+                    android:text="第一个item1" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

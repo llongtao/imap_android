@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/follow"
+        android:orderInCategory="100"
+        android:title="关注"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/join"
+        android:orderInCategory="100"
+        android:title="加入"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/cancel"
+        android:orderInCategory="100"
+        android:title="取消"
+        app:showAsAction="never" />
+</menu>

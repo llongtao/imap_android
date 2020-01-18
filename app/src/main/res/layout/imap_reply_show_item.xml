@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_reply"
+     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+     android:layout_height="match_parent">
+<!--回复人头像-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_reply_from"
+        android:layout_width="22dp"
+        android:src="@mipmap/ic_launcher1"
+        android:layout_height="22dp" />
+    <TextView
+        android:id="@+id/tv_reply_nickname"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="5dp"
+        android:textColor="#8C8B8C"
+        android:text="海星AAAAA"
+        android:textSize="13.5dp"
+        android:layout_height="wrap_content" />
+    <!--回复按钮-->
+    <TextView
+        android:id="@+id/tv_reply_reply"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:gravity="right|center_vertical"
+        android:text="回复"
+        android:textColor="#A89DA8"
+        android:textSize="13dp" />
+</LinearLayout>
+    <!--回复内容-->
+<LinearLayout
+android:id="@+id/ll_reply_content"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="32dp"
+        android:paddingTop="4dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="4dp"
+        android:textColor="#616161"
+        android:textSize="13.5dp" />
+    <LinearLayout
+        android:id="@+id/ll_reply_time_and_to"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="32dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_reply_to"
+            android:layout_width="0dp"
+            android:textSize="9dp"
+            android:textColor="#BB97C1"
+            android:layout_weight="1.6"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_reply_time"
+            android:layout_marginTop="4dp"
+            android:gravity="right"
+            android:textSize="12dp"
+            android:paddingLeft="10dp"
+            android:textColor="#ABAAAB"
+            android:text="2019-10-10"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

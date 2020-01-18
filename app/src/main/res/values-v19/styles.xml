@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <!-- <item name="colorPrimaryDark">@color/grey_1</item>-->
+        <item name="colorAccent">@color/gray7</item>
+<!--
+        <item name="android:windowTranslucentStatus">true</item>  //上部标题栏透明
+-->
+       <!-- <item name="android:windowTranslucentNavigation">true</item>  底部按钮透明-->
+    </style>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:clickable="true"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:background="@drawable/imap_border_dark_radius_5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_dlg_top"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/iv_dlg_head"
+            android:layout_width="27dp"
+            android:layout_height="27dp" />
+        <TextView
+            android:id="@+id/tv_dlg_title"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#010201"
+            android:textSize="17.5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_dlg_middle"
+        android:layout_below="@+id/ll_dlg_top"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dlg_desc"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="14.5dp"
+            android:textColor="#898989"
+            android:lineSpacingExtra="2dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/ll_dlg_bottom"
+        android:layout_below="@+id/ll_dlg_middle"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <LinearLayout
+            android:id="@+id/ll_left_bottom"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_dlg_people"
+                android:layout_width="22dp"
+                android:layout_height="11dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/person" />
+            <TextView
+                android:id="@+id/tv_dlg_people"
+                android:layout_marginLeft="4dp"
+                android:textSize="12.5dp"
+                android:gravity="left|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_right_bottom"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_dlg_category"
+                android:layout_width="@dimen/smalllogo"
+                android:layout_gravity="center"
+                android:src="@mipmap/category"
+                android:layout_height="@dimen/smalllogo" />
+            <TextView
+                android:id="@+id/tv_dlg_category"
+                android:textSize="12.5dp"
+                android:gravity="left|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

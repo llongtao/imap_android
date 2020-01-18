@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--导航-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/imap_login_top_bg"
+        android:layout_height="55dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_marginLeft="15dp"
+            android:layout_width="28dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/imap_back_left"
+            android:layout_height="28dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:paddingRight="40dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="登录"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--密码登陆和验证码登陆-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="90dp"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_login_by_password"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="19dp"
+            android:background="@drawable/imap_login_selector"
+            android:gravity="center"
+            android:textColor="#D0BBFD"
+            android:text="密码登录"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_login_by_code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="19dp"
+            android:textColor="#CCCCCC"
+            android:gravity="center"
+            android:text="验证码登录"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--主体-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="140dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/f_vp_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+</RelativeLayout>

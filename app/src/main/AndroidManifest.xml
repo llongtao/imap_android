@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="1"
+    android:versionName="1.0"
+    package="yourpackage">
+  <!--极光权限-->
+  <permission android:name="com.test.hyxc.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+  <uses-permission android:name="com.test.hyxc.permission.JPUSH_MESSAGE" />
+  <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+  <!-- 在SD卡中创建与删除文件权限 -->
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+  <!-- Optional. Required for location feature -->
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+  <!-- 读写SD卡权限 -->
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+  <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+  <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <!-- 这个权限用于访问GPS定位 -->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <!-- 这个权限用于进行网络定位 -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+  <application
+      android:name="tools.AppContext"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher1"
+      android:windowSoftInputMode="adjustPan|stateHidden"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:usesCleartextTraffic="true"
+      android:networkSecurityConfig="@xml/network_security_config"
+      android:theme="@style/AppTheme">
+      <!--尝试防止闪退-->
+      <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+      <meta-data
+          android:name="AA_DB_NAME"
+          android:value="jchat.db"/>
+      <meta-data
+          android:name="AA_MODELS"
+          android:value="jiguang.chat.database.UserEntry, jiguang.chat.database.FriendEntry,
+             jiguang.chat.database.FriendRecommendEntry, jiguang.chat.database.ConversationEntry"/>
+      <meta-data
+          android:name="AA_DB_VERSION"
+          android:value="4"/>
+      <!-- AK鉴权 百度地图-->
+      <service
+          android:name="com.baidu.location.f"
+          android:enabled="true"
+          android:process=":remote" >
+      </service>
+      <!-- meta-data需要写在application中 -->
+      <meta-data
+          android:name="com.baidu.lbsapi.API_KEY"
+          android:value="##########" />
+    <!--极光配置-->
+    <!-- 可配置android:process参数将PushService放在其他进程中 -->
+    <service
+        android:name="cn.jpush.android.service.PushService"
+        android:enabled="true"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.REGISTER" />
+        <action android:name="cn.jpush.android.intent.REPORT" />
+        <action android:name="cn.jpush.android.intent.PushService" />
+        <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+      </intent-filter>
+    </service>
+      <!--&***************处理notification通知栏信息的处理*****************-->
+      <receiver android:name="com.test.hyxc.notification.NotificationBroadcastReceiver">
+          <intent-filter>
+              <action android:name="notification_cancelled"/>
+              <action android:name="notification_clicked"/>
+          </intent-filter>
+      </receiver>
+    <!-- Required SDK核心功能-->
+   <receiver
+        android:name="cn.jpush.android.service.PushReceiver"
+        android:enabled="true"
+        android:exported="false">
+      <intent-filter android:priority="1000">
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+        <category android:name="com.test.hyxc" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.USER_PRESENT" />
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+      </intent-filter>
+      <!--Optional-->
+      <intent-filter>
+        <action android:name="android.intent.action.PACKAGE_ADDED" />
+        <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+        <data android:scheme="package" />
+      </intent-filter>
+    </receiver>
+
+    <!--Required SDK核心功能-->
+    <receiver
+        android:name="cn.jpush.android.service.AlarmReceiver"
+        android:exported="false" />
+
+    <!-- Required since JCore 1.1.7. SDK 核心功能-->
+    <provider
+        android:name="cn.jpush.android.service.DataProvider"
+        android:authorities="com.test.hyxc.DataProvider"
+        android:grantUriPermissions="true"
+        android:exported="false" />
+
+    <!-- Required since JMessage 2.7.0 SDK 核心功能-->
+    <provider
+        android:name="cn.jpush.im.android.helpers.ipc.IMProvider"
+        android:authorities="com.test.hyxc.IMProvider"
+        android:exported="false" />
+
+    <!--Required JMessage SDK核心功能-->
+    <receiver
+        android:name="cn.jpush.im.android.helpers.IMReceiver"
+        android:enabled="true"
+        android:exported="false">
+    </receiver>
+
+    <!--since JCore 1.8.0 option 可选项。用于同一设备中不同应用的 jiguang 服务相互拉起的功能。-->
+    <!--若不启用该功能可删除该组件，或把 enabled 设置成 false ；拉起服务被关闭，App 不会通过拉起服务拉起其他的 App，也不会被其他 App 拉起。-->
+    <service
+        android:name="cn.jpush.android.service.DaemonService"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter >
+        <action android:name="cn.jpush.android.intent.DaemonService" />
+        <category android:name="com.test.hyxc"/>
+      </intent-filter>
+    </service>
+
+    <!-- Required. For publish channel feature -->
+    <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。-->
+    <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+    <meta-data
+        android:name="JPUSH_CHANNEL"
+        android:value="developer-default" />
+    <!--***********************************************极光配置完成-->
+
+    <!--  android:windowSoftInputMode="adjustPan"-->
+    <activity android:name="com.test.hyxc.GuideActivity" />
+    <!--ffmpeg测试-->
+    <activity android:name=".FFmpegTestActivity"></activity>
+    <activity android:name="com.test.hyxc.WelcomeActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name="com.test.hyxc.MainActivity" android:launchMode="singleTask"/>
+    <activity android:name="com.test.hyxc.login.LoginActivity">
+    </activity>
+    <!--验证码等待-->
+    <activity android:name="com.test.hyxc.login.CodeWaitActivity"/>
+    <!--注册页-->
+    <activity android:name=".login.RegisterActivity"/>
+    <!--发布-->
+    <activity android:name=".page.activity.PublishActivity" android:launchMode="singleTask"></activity>
+    <!--发布活动-->
+    <activity android:name=".page.publish.PublishActActivity" android:launchMode="singleTask"/>
+      <!--修改活动-->
+    <activity android:name=".page.activity.ChangeActActivity" android:launchMode="singleTask"/>
+    <!--活动报名用户列表-->
+    <activity android:name=".page.activity.ActSignUsersActivity" android:launchMode="singleTask"/>
+      <!--活动发布-->
+    <activity android:name=".page.activity.ActivityDetailShow" android:launchMode="singleTask"/>
+    <activity android:name="view.FastBlurActivity"/>
+    <!--测试多图选择器-->
+    <activity android:name="com.zaaach.citypicker.CityActivity"/>
+    <activity android:name="com.test.hyxc.ui.ImapChActivity1">
+
+    </activity>
+    <!--poi选择-->
+    <activity android:name=".page.publish.PoiChooseActivity"/>
+
+    <meta-data android:name="JPUSH_APPKEY" android:value="" /> <!--  </>值来自开发者平台取得的AppKey-->
+    <!--7.0文件读取-->
+    <provider
+        android:name="android.support.v4.content.FileProvider"
+        android:authorities="com.test.hyxc.fileProvider"
+        android:grantUriPermissions="true"
+        android:exported="false">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/provider_paths" />
+    </provider>
+
+    <!--Image Selector Entry-->
+    <activity
+        android:configChanges="orientation|screenSize"
+        android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity" />
+    <!--视频拍摄模块-->
+    <activity android:name="com.test.hyxc.videoeditor.ui.activity.MainActivity">
+    </activity>
+    <activity android:name="com.test.hyxc.videoeditor.ui.activity.TrimVideoActivity"/>
+    <activity android:name="com.test.hyxc.videoeditor.ui.activity.VideoCameraActivity"/>
+    <activity android:name="com.test.hyxc.videoeditor.ui.activity.VideoAlbumActivity"/>
+    <activity android:name="com.test.hyxc.videoeditor.ui.activity.VideoPreviewActivity"/>
+    <!--作品显示-->
+    <activity android:name=".page.workshow.ImageShowActivity"/>
+
+    <activity android:name=".page.workshow.VideoShowActivity"/>
+    <activity android:name=".page.workshow.Page2Activity"/>
+    <!--评论显示业-->
+    <activity android:name=".page.discussreplyshow.DiscussReplyActivity"/>
+    <!--用户信息补全-->
+    <activity android:name=".page.personal.InformationActivity"/>
+     <!--头像裁剪页面-->
+    <activity android:name=".headimg.ClipImageActivity"/>
+    <!--城市选择-->
+    <activity android:name=".page.location.SelectProvinceActivity"/>
+    <activity android:name=".page.location.SelectCityActivity"/>
+    <activity android:name=".page.location.SelectRegionActivity"/>
+    <!--大学选择-->
+    <activity android:name=".page.university.SelectProvinceActivity"/>
+    <activity android:name=".page.university.SelectCityActivity"/>
+    <activity android:name=".page.university.SelectUniversityActivity"/>
+    <!--我的-->
+    <activity android:name=".page.personal.MeActivity"/>
+    <!--海岛-->
+    <activity android:name=".page.island.IslandSearchActivity" android:launchMode="singleTask"/>
+    <activity android:name=".page.island.IslandShowActivity" android:launchMode="singleTask"/>
+    <activity android:name=".page.island.IslandCreateActivity"/>
+    <activity android:name=".page.island.IslandUsersActivity" />
+    <activity android:name=".page.island.IslandSelectCategoryActivity"/>
+    <activity android:name=".page.island.IslandChangeActivity"/>
+    <activity android:name=".page.island.IslandSettingsActivity"/>
+    <activity android:name=".page.island.IslandJoinAllowActivity"/>
+    <activity android:name=".page.island.IslandAskAllowActivity"/>
+      <!--搜索-->
+    <activity android:name=".page.search.SearchActivity"/>
+    <!--消息-->
+    <activity android:name=".page.im.MessageListActivity"/>
+      <!--极光通信-->
+      <activity
+          android:name=".chat.activity.WelcomeActivity"
+          android:screenOrientation="portrait"
+          android:theme="@style/WelcomeStyle">
+      </activity>
+      <activity
+          android:name=".chat.activity.LoginActivity"
+          android:screenOrientation="portrait"
+          />
+      <activity
+          android:name=".chat.activity.MainActivity"
+          android:launchMode="singleTask"
+          android:screenOrientation="portrait"
+          android:theme="@style/AppBaseTheme"
+          android:windowSoftInputMode="adjustPan|stateHidden"/>
+      <!--点击分享时候选择群组或者好友时候的页面-->
+
+      <activity android:name=".chat.activity.BaseActivity"/>
+      <activity
+          android:name=".chat.activity.FinishRegisterActivity"
+          android:screenOrientation="portrait"
+          android:windowSoftInputMode="stateVisible"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.ResetPasswordActivity"
+          android:theme="@style/BaseThemes">
+      </activity>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.FeedbackActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.AboutJChatActivity"
+          android:theme="@style/BaseThemes"/>
+      <!--这里有个需要注意的地方就是,自定义的弹窗需要自定义一个theme否则系统会默认给设置padding自己设置的属性不生效-->
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.PersonalActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.NickSignActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchForAddFriendActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchFriendInfoActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.VerificationActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.FriendRecommendActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchFriendDetailActivity"
+          android:theme="@style/BaseThemes"/>
+
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.ChatActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchContactsActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.utils.imagepicker.ImageBaseActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.utils.imagepicker.ImageGridActivity"
+          android:configChanges="orientation|screenSize"
+          android:theme="@style/ImagePickerTheme"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.utils.imagepicker.ImageCropActivity"
+          android:configChanges="orientation|screenSize"
+          android:hardwareAccelerated="false"
+          android:theme="@style/ImagePickerTheme"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.utils.imagepicker.ImagePreviewActivity"
+          android:configChanges="orientation|screenSize"
+          android:theme="@style/ImagePickerThemeFullScreen"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.utils.imagepicker.ImagePreviewDelActivity"
+          android:theme="@style/ImagePickerThemeFullScreen"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.pickerimage.PickerAlbumActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity android:name=".chat.pickerimage.PickerAlbumPreviewActivity"
+          android:screenOrientation="portrait"/>
+      <activity android:name=".chat.pickerimage.PickImageActivity"
+          android:screenOrientation="portrait"/>
+      <activity android:name=".chat.activity.BrowserViewPagerActivity"
+          android:screenOrientation="portrait"/>
+      <activity android:name=".chat.activity.historyfile.activity.BrowserFileImageActivity"
+          android:screenOrientation="portrait"/>
+      <activity android:name=".chat.activity.WatchVideoActivity"
+          android:screenOrientation="portrait"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SendFileActivity"
+          android:launchMode="singleInstance"
+          android:theme="@style/AppBaseTheme"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.historyfile.activity.HistoryFileActivity"
+          android:theme="@style/AppBaseTheme"/>
+      <activity android:name=".chat.activity.PlayVideoActivity"
+          android:screenOrientation="portrait"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.location.activity.MapPickerActivity"
+          android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.FriendInfoActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.ChatDetailActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.MembersInChatActivity"
+          android:configChanges="orientation|keyboardHidden"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustPan|stateHidden"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.GroupActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchMoreFriendsActivity"
+          android:configChanges="orientation|keyboardHidden"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustPan|stateHidden"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchMoreGroupActivity"
+          android:configChanges="orientation|keyboardHidden"
+          android:theme="@style/AppBaseTheme"
+          android:windowSoftInputMode="adjustPan|stateHidden"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.FriendSettingActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SetNoteNameActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.ChooseAtMemberActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.GroupGridViewActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.GroupNotFriendActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SelectFriendActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.DownLoadActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.CreateGroupActivity"
+          android:configChanges="orientation|keyboardHidden"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustPan|stateHidden"/>
+      <activity
+          android:name=".chat.utils.photovideo.takevideo.CameraActivity"
+          android:configChanges="orientation|keyboardHidden"
+          android:launchMode="singleTask"
+          android:screenOrientation="portrait"
+          android:theme="@style/AppBaseFullTheme"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchGroupActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchAtMemberActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.ForwardMsgActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.ForwardMsgActivity1"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.Person2CodeActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.ScanResultActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.CommonScanActivity"
+          android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.receiptmessage.ReceiptMessageListActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.SearchFriendBusinessActivity"
+          android:theme="@style/BaseThemes"
+          android:windowSoftInputMode="adjustResize"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.FriendListActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.NotFriendSettingActivity"
+          android:theme="@style/BaseThemes"/>
+      <activity
+          android:screenOrientation="portrait"
+          android:name=".chat.activity.GroupAvatarActivity"
+          android:theme="@style/AppTh"/>
+  </application>
+</manifest>

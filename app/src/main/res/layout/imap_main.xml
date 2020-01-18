@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:clickable="true"
+    android:paddingTop="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <!-- tools:context="com.test.hTestPublishActivityvity">-->
+    <LinearLayout android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/mynavibar_height">
+        <LinearLayout android:id="@+id/ll_city"
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:layout_weight="1">
+            <TextView android:layout_width="wrap_content"
+                android:id="@+id/tv_city"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginLeft="24dp"
+                android:layout_height="match_parent"
+                android:textSize="13dp"
+                android:text="杭州"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp"
+            android:id="@+id/ll_toptitle"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+            <LinearLayout android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <TextView android:layout_width="wrap_content"
+                    android:id="@+id/tv_recommend"
+                    android:text="精彩"
+                    android:textColor="@color/tab_color_underline"
+                    android:layout_gravity="center"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/mynavibar_title"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent">
+                <TextView android:layout_width="wrap_content"
+                    android:id="@+id/tv_follow"
+                    android:text="关注"
+                    android:gravity="bottom"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/mynavibar_title"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent">
+                <TextView android:id="@+id/tv_activity"
+                    android:layout_width="wrap_content"
+                    android:text="活动"
+                    android:gravity="bottom"
+                    android:textColor="@color/text_color"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/mynavibar_title"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+            <ImageView android:layout_width="18dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                android:id="@+id/iv_search"
+                android:src="@drawable/search2"
+                android:layout_height="18dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_cursor"
+        android:layout_marginTop="36dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        android:src="@mipmap/imap_line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="44dp"
+        android:layout_height="fill_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/f_vp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_border"
+        android:layout_height="44dp">
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_shouye"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="首页"
+            android:layout_height="match_parent"/>
+        <TextView android:layout_width="0dp"
+            android:id="@+id/tv_island"
+            android:layout_weight="1"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="海岛"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView android:layout_width="0dp"
+            android:id="@+id/iv_publish"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:layout_weight="1.4"
+            android:src="@drawable/imap_publish"
+            android:layout_height="match_parent"/>
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_news"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="消息"
+            android:layout_height="match_parent"/>
+        <TextView android:layout_width="0dp"
+            android:id="@+id/tv_me"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

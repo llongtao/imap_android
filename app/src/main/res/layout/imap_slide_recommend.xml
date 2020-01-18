@@ -1,0 +1,49 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:tabIndicatorColor="#efefef"
+                app:tabIndicatorHeight="0dp"
+                app:tabBackground="@android:color/transparent"
+                app:tabMode="scrollable"
+                app:tabMaxWidth="200dp"
+                app:tabMinWidth="20dp"
+                app:tabPaddingEnd="20dp"
+                app:tabPaddingStart="20dp"
+                app:tabSelectedTextColor="#333333"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:tabTextColor="#D4D4D4"></android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_view"
+                android:background="@drawable/border"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:background="#F7F7FD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.design.widget.CoordinatorLayout>

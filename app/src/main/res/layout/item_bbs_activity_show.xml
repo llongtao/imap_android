@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_item"
+    android:paddingTop="10dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="3dp"
+            android:gravity="left|top"
+            android:layout_gravity="left|top"
+            android:layout_height="140dp">
+            <ImageView
+                android:id="@+id/iv_activity"
+                android:scaleType="fitXY"
+                android:layout_gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_height="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1.0"
+                android:lineSpacingExtra="10dp"
+                android:textColor="@color/workcontent"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="0dp"
+                    android:paddingLeft="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:textSize="11.5dp"
+                    android:gravity="center_vertical" />
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:textSize="13dp"
+                    android:textColor="#99030303"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:id="@+id/ll_sign"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.26"
+                android:background="@drawable/imap_border_dark_radius"
+                android:gravity="right|center_vertical">
+                <TextView
+                    android:id="@+id/tv_sign"
+                    android:layout_width="match_parent"
+                    android:textSize="13dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="----没有更多了----"
+            android:textSize="12dp" />
+    </LinearLayout>
+</LinearLayout>

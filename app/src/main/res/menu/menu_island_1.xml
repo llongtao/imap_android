@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/see_head"
+        android:orderInCategory="100"
+        android:title="查看头像"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/see_desc"
+        android:orderInCategory="100"
+        android:title="海岛简介"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/leave"
+        android:orderInCategory="100"
+        android:title="退出海岛"
+        app:showAsAction="never" />
+
+</menu>

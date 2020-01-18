@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/poi_top_relative"
+        android:background="@drawable/imap_login_top_bg"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_location_back"
+            android:background="#00000000"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:text="返回"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="申请权限设置" />
+
+        <Button
+            android:id="@+id/btn_location_ok"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:background="#00000000"
+            android:textSize="16dp"
+            android:textColor="#ffffff"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="" />
+
+    </RelativeLayout>
+   <!-- <ListView
+        android:id="@+id/lv_join_allow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <RadioGroup  android:id="@+id/rg_select"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/can"
+                android:text="申请即可加入"
+                android:checked="true"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/verify"
+                android:text="验证通过后加入"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/cannot"
+                android:text="不允许申请加入"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/save"
+            android:layout_width="75dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#fffeff"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="16.5dp"
+            android:background="@drawable/imap_publish_button"
+            android:layout_gravity="center"
+            android:layout_height="30dp" />
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="75dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#fffeff"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="16.5dp"
+            android:background="@drawable/imap_publish_button_1"
+            android:layout_gravity="center"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

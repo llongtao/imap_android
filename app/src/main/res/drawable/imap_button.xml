@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    //控制界面颜色渐变（你这个用不到）
+     <gradient
+         android:startColor="#E2B3FD"
+         android:endColor="#AA95FD"
+         android:type="linear"
+         android:angle="360"/>
+    //控制圆角大小
+    <corners android:radius="30dp" />
+</shape>

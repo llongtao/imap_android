@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="10dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:clickable="true"
+            android:paddingTop="10dp"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/imap_back_grey"
+                android:layout_height="25dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#565454"
+                android:gravity="bottom"
+                android:text="活动详情"
+                android:textSize="17dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:clickable="false"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:text="更多"
+            android:textSize="15.5dp"
+            android:paddingBottom="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <!--详情layout-->
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp">
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--活动信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_act_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:paddingLeft="4dp"
+            android:textColor="#bd030303"
+            android:textSize="18.5dp" />
+    </LinearLayout>
+    <!--时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/imap_time" />
+        <TextView
+            android:id="@+id/tv_act_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:paddingRight="6dp"
+            android:textColor="#9596a9"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <!--地点-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/imap_location" />
+        <TextView
+            android:id="@+id/tv_act_address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:paddingRight="6dp"
+            android:textColor="#9596a9"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <!--举办方-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="65dp"
+            android:layout_marginLeft="10dp"
+            android:text="举办方： "
+            android:textColor="#9596a9"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:gravity="right|center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_island_logo"
+                android:scaleType="fitXY"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:id="@+id/tv_island_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:minWidth="150dp"
+                android:paddingLeft="8dp"
+                android:textColor="#bd030303"
+                android:textSize="15dp" />
+            <ImageView
+                android:layout_width="14dp"
+                android:src="@drawable/right_go"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--联系人-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="65dp"
+            android:layout_marginLeft="10dp"
+            android:text="联系人： "
+            android:textColor="#9596a9"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingRight="10dp"
+            android:orientation="horizontal"
+            android:gravity="right|center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_linkman"
+                android:scaleType="fitXY"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:id="@+id/tv_linkman"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:minWidth="150dp"
+                android:paddingLeft="8dp"
+                android:textColor="#bd030303"
+                android:textSize="15dp" />
+            <ImageView
+                android:layout_width="14dp"
+                android:src="@drawable/right_go"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+        <!--报名人数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp">
+            <TextView
+                android:layout_width="65dp"
+                android:layout_marginLeft="10dp"
+                android:text="已报名： "
+                android:textColor="#9596a9"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_sign_count"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_people"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/person" />
+
+                <TextView
+                    android:id="@+id/tv_sign_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:minWidth="150dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="#bd030303"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/right_go" />
+            </LinearLayout>
+        </LinearLayout>
+    <!--详情-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:text="活动详情： "
+            android:textStyle="bold"
+            android:textColor="#9596a9"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_detail"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="15dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            android:textColor="#aa040404"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <!--报名按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_height="70dp">
+            <Button
+                android:id="@+id/btn_sign"
+                android:layout_width="120dp"
+                android:textColor="#fffeff"
+                android:gravity="center"
+                android:text="报名"
+                android:textSize="19dp"
+                android:background="@drawable/imap_publish_button"
+                android:layout_gravity="center"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

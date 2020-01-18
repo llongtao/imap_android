@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="#fff" />  //设置该控件的背景颜色
+
+    //控制边界线颜色和笔触大小
+    <stroke
+        android:width="1px"
+        android:color="@color/grey_ripple" />
+    //控制圆角大小
+    <corners android:radius="1dp" />
+</shape>

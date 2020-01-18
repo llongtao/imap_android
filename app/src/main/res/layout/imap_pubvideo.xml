@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:gravity="top">
+    <!--说定啥-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/imap_say_something"
+        android:orientation="vertical"
+        android:layout_height="110dp">
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:hint="说点啥叭.."
+            android:maxLength="100"
+            android:padding="6dp"
+            android:textStyle="normal"
+            android:textSize="16dp"
+            android:gravity="top"
+            android:background="@null"
+            android:layout_height="80dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right|center_vertical"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_width="18dp"
+                android:src="@mipmap/imap_location"
+                android:layout_height="18dp" />
+            <TextView
+                android:id="@+id/tv_district"
+                android:layout_width="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingRight="15dp"
+                android:gravity="left|center_vertical"
+                android:text="定位中.."
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--添加图片-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/imap_say_something"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="所选视频" />
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="30dp"
+                android:text="0/1"
+                android:textColor="#B890C5"
+                android:textSize="15dp" />
+        </LinearLayout>
+        <GridView
+            android:id="@+id/gw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:columnWidth="76dp"
+            android:numColumns="4" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:background="@drawable/imap_ripple_selector"
+        android:paddingRight="20dp"
+        android:layout_height="2px">
+    </LinearLayout>
+    <!--发布到--> 
+    <LinearLayout
+        android:id="@+id/ll_publish_to"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/imap_ripple_selector"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="left|center_vertical"
+            android:src="@mipmap/imap_publish_to"
+            android:layout_height="24dp" />
+        <TextView
+            android:layout_width="60dp"
+            android:gravity="left|center_vertical"
+            android:text="发布到:"
+            android:layout_marginLeft="6dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_selected_island"
+            android:layout_width="22dp"
+            android:layout_marginLeft="6dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/imap_square"
+            android:layout_height="22dp" />
+        <TextView
+            android:id="@+id/tv_selected_island"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="#67A388"
+            android:text="广场"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="14dp"
+            android:src="@mipmap/imap_down"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="14dp"
+            android:layout_height="14dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="fill_parent">
+            <Button
+                android:id="@+id/btn_publish"
+                android:layout_width="120dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="#fffeff"
+                android:gravity="center"
+                android:text="发布"
+                android:textSize="19dp"
+                android:background="@drawable/imap_publish_button"
+                android:layout_gravity="center"
+                android:layout_height="40dp" />
+    </LinearLayout>
+
+</LinearLayout>

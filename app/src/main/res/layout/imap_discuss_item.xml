@@ -1,0 +1,28 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal">
+        <!--昵称-->
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#3f3e3e"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+        <!--评论内容-->
+        <TextView
+            android:id="@+id/tv_discuss_text"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:lineSpacingExtra="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:textColor="#747272"
+            android:textSize="13.5dp" />
+</LinearLayout>

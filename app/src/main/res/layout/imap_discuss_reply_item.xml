@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_container"
+    android:orientation="horizontal"
+     android:paddingBottom="23dp"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent">
+    <!--头像-->
+     <LinearLayout
+         android:id="@+id/ll_head"
+         android:orientation="vertical"
+         android:paddingLeft="20dp"
+         android:paddingRight="10dp"
+         android:layout_gravity="left|top"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:id="@+id/iv_head"
+             android:layout_width="34dp"
+             android:layout_height="34dp"
+             android:layout_marginTop="10dp"
+             android:clickable="true" />
+     </LinearLayout>
+      <!--右侧评论 回复-->
+      <LinearLayout
+          android:id="@+id/ll_right"
+          android:orientation="vertical"
+          android:layout_marginRight="20dp"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:paddingRight="10dp"
+              android:orientation="horizontal"
+              android:layout_marginBottom="10dp"
+              android:layout_height="wrap_content">
+          <!--昵称-->
+              <TextView
+                  android:id="@+id/tv_usernickname"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="left|top"
+                  android:layout_weight="1"
+                  android:gravity="top"
+                  android:paddingTop="5dp"
+                  android:text=""
+                  android:textColor="#444242"
+                  android:textSize="15dp" />
+              <!--时间-->
+              <TextView
+                  android:id="@+id/tv_time"
+                  android:layout_width="0dp"
+                  android:textColor="#908E8E"
+                  android:textSize="12dp"
+                  android:layout_weight="0.8"
+                  android:layout_height="wrap_content" />
+              <!--回复按钮-->
+               <TextView
+                   android:id="@+id/tv_reply"
+                   android:layout_width="40dp"
+                   android:text="回复"
+                   android:textSize="16dp"
+                   android:textColor="#A89DA8"
+                   android:clickable="true"
+                   android:layout_height="25dp" />
+          </LinearLayout>
+          <!--评论内容-->
+          <TextView
+              android:id="@+id/tv_discuss_text"
+              android:textSize="14dp"
+              android:lineSpacingExtra="8dp"
+              android:textColor="#4F4F50"
+              android:text="等你来添加第一条评论哦~"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+          <!--回复-->
+          <LinearLayout
+              android:id="@+id/ll_reply"
+              android:layout_marginTop="10dp"
+              android:orientation="vertical"
+              android:background="@drawable/imap_border_reply_panel"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+          </LinearLayout>
+      </LinearLayout>
+</LinearLayout>

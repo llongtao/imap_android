@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shezhi"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/right_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:elevation="10dp"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="88sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="270dp"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_head1"
+        android:layout_width="42dp"
+        android:layout_height="42dp"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+        <!--昵称和级别-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/nickname" />
+        <TextView
+            android:id="@+id/tv_level"
+            android:visibility="invisible"
+            android:layout_marginLeft="5dp"
+            android:textSize="13dp"
+            android:layout_gravity="left|center_vertical"
+            android:gravity="left|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="6dp"
+            android:lineSpacingExtra="10dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/workcontent"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:text="" />
+
+        <com.test.hyxc.view.NineGridTestLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_nine_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:sapcing="4dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="right"
+            android:background="@drawable/bottom_border_2"
+            android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:visibility="gone"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/more" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="12dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:text="----没有更多了----"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

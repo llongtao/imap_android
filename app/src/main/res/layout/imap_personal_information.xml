@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F2F2F2"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="#F2F2F2"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--top-->
+    <LinearLayout
+        android:id="@+id/top"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp"
+        android:background="@drawable/imap_login_top_bg"
+        android:paddingRight="25dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+             <ImageView
+                 android:id="@+id/iv_back"
+                 android:layout_width="22dp"
+                 android:layout_gravity="bottom"
+                 android:src="@mipmap/imap_back_white"
+                 android:layout_height="22dp" />
+             <TextView
+                 android:id="@+id/tv_title"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:text="个人资料信息"
+                 android:textSize="16.5dp"
+                 android:textColor="#ffffff"
+                 android:layout_gravity="bottom"
+                 android:gravity="center_horizontal|bottom"
+                 android:layout_height="match_parent" />
+              <LinearLayout
+                  android:layout_width="24dp"
+                  android:layout_gravity="bottom"
+                  android:layout_height="24dp"></LinearLayout>
+    </LinearLayout>
+            <!--content-->
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <!--头像-->
+                <LinearLayout
+                    android:id="@+id/ll_headimg"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/height2"
+                    android:layout_marginBottom="@dimen/interval"
+                    android:background="#FFFEFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_headimg"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="头像"
+                        android:textColor="@color/color1"
+                        android:textSize="@dimen/fontSize1" />
+
+                    <ImageView
+                        android:id="@+id/iv_headimg"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/imap_publish_image_add" />
+                </LinearLayout>
+                <!--昵称-->
+                <LinearLayout
+                    android:id="@+id/ll_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height1"
+                    android:layout_marginBottom="@dimen/interval"
+                    android:background="#FFFEFF"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_nickname"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="昵称"
+                        android:textColor="@color/color1"
+                        android:textSize="@dimen/fontSize1" />
+                    <EditText
+                        android:id="@+id/et_nickname"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="别纠结~"
+                        android:padding="2dp"
+                        android:textColor="#6C6C6E"
+                        android:textColorHint="@color/color2"
+                        android:textSize="15dp" />
+                </LinearLayout>
+                <!--性别-->
+                <LinearLayout
+                    android:id="@+id/ll_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="@dimen/interval"
+                    android:background="#FFFEFF"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_sex"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="性别"
+                        android:textColor="@color/color1"
+                        android:textSize="@dimen/fontSize1" />
+                    <!--性别男-->
+                    <LinearLayout
+                        android:id="@+id/ll_male"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:paddingTop="12.5dp">
+                            <ImageView
+                                android:id="@+id/iv_male"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/male1" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_male"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="3dp"
+                            android:text="男"
+                            android:textColor="@color/color1" />
+                    </LinearLayout>
+                    <!--性别女-->
+                    <LinearLayout
+                        android:id="@+id/ll_female"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:paddingTop="12.5dp">
+                            <ImageView
+                                android:id="@+id/iv_female"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/female1" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_female"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingTop="3dp"
+                            android:text="女"
+                            android:textColor="@color/color1" />
+                    </LinearLayout>
+                    <!--右侧占位-->
+                    <LinearLayout
+                        android:id="@+id/ll_zhanwei"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </LinearLayout>
+                <!--个性签名-->
+                <LinearLayout
+                    android:id="@+id/ll_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="@dimen/interval"
+                    android:background="#FFFEFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_sign"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal|top"
+                        android:paddingTop="15dp"
+                        android:text="签名"
+                        android:textColor="@color/color1"
+                        android:textSize="@dimen/fontSize1" />
+
+                    <EditText
+                        android:id="@+id/et_sign"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="海星梦想"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="#6C6C6E"
+                        android:textColorHint="@color/color2"
+                        android:textSize="15dp" />
+                </LinearLayout>
+                <!--生日-->
+                <LinearLayout
+                    android:id="@+id/ll_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height1"
+                    android:layout_marginBottom="@dimen/interval"
+                    android:background="#FFFEFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_birth"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="生日"
+                        android:textColor="@color/color1"
+                        android:textSize="@dimen/fontSize1" />
+                    <!--这里是textview-->
+                    <TextView
+                        android:id="@+id/tv_birth_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:padding="2dp"
+                        android:textColor="#6C6C6E"
+                        android:textColorHint="@color/color2" />
+                </LinearLayout>
+                <!--常住地-->
+                <LinearLayout
+                    android:id="@+id/ll_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height1"
+                    android:layout_marginBottom="@dimen/interval"
+                    android:background="#FFFEFF"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="常住地"
+                        android:textColor="@color/color1"
+                        android:textSize="@dimen/fontSize1" />
+
+                    <TextView
+                        android:id="@+id/tv_location_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:padding="2dp"
+                        android:text="请真实填写~"
+                        android:textColor="@color/color2" />
+                </LinearLayout>
+                <!--学校-->
+                <LinearLayout
+                    android:id="@+id/ll_uni"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height1"
+                    android:layout_marginBottom="@dimen/interval"
+                    android:background="#FFFEFF"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_uni"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="大学"
+                        android:textColor="@color/color1"
+                        android:textSize="@dimen/fontSize1" />
+                    <TextView
+                        android:id="@+id/tv_uni_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:padding="2dp"
+                        android:textColor="@color/color2" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--保存按钮-->
+            <LinearLayout
+                android:id="@+id/ll_save"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/ll_content"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="95dp"
+                    android:layout_height="34dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/imap_publish_button"
+                    android:gravity="center"
+                    android:text="保存"
+                    android:textColor="#fffeff"
+                    android:textSize="15.5dp" />
+            </LinearLayout>
+</LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:background="@drawable/imap_login_top_bg"
+        android:gravity="bottom"
+        android:paddingTop="22dp"
+        android:paddingBottom="3dp"
+        android:orientation="horizontal"
+        android:layout_height="58dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_marginLeft="13dp"
+            android:src="@mipmap/imap_back_left"
+            android:layout_gravity="left|bottom"
+            android:paddingTop="5dp"
+            android:paddingBottom="3dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tv_img"
+            android:layout_width="0dp"
+            android:gravity="right|bottom"
+            android:paddingRight="20dp"
+            android:textSize="22dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="图片"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_video"
+            android:layout_width="0dp"
+            android:paddingLeft="20dp"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="left|bottom"
+            android:text="视频"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_zhanwei"
+            android:layout_width="25dp"
+            android:layout_marginLeft="13dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_height="25dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="#F5F5F5"
+        android:padding="4dp"
+        android:layout_height="fill_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/f_vp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</RelativeLayout>

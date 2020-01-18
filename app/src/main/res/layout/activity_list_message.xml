@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/imap_login_top_bg"
+        android:gravity="left|center_vertical"
+        android:layout_height="65dp">
+        <TextView
+            android:id="@+id/tv_top"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="趣聊"
+            android:textStyle="bold"
+            android:textSize="17.5dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="left|center_vertical"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <view.SwipeMenu.SwipeMenuListView
+        android:id="@+id/listView"
+        android:layout_marginTop="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+    <LinearLayout android:layout_width="match_parent"
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_border"
+        android:layout_height="44dp">
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_shouye"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="首页"
+            android:layout_height="match_parent"/>
+        <TextView android:layout_width="0dp"
+            android:id="@+id/tv_island"
+            android:layout_weight="1"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="海岛"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView android:layout_width="0dp"
+            android:id="@+id/iv_publish"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:layout_weight="1.4"
+            android:src="@drawable/imap_publish"
+            android:layout_height="match_parent"/>
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/tv_news"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="消息"
+            android:layout_height="match_parent"/>
+        <TextView android:layout_width="0dp"
+            android:id="@+id/tv_me"
+            android:background="@drawable/imap_ripple_selector"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

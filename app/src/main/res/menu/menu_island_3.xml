@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/change_head"
+        android:orderInCategory="100"
+        android:title="更换头像"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/change_island"
+        android:orderInCategory="100"
+        android:title="海岛信息"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="100"
+        android:title="状态设置"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ask"
+        android:orderInCategory="100"
+        android:title="邀请好友"
+        app:showAsAction="never" />
+</menu>

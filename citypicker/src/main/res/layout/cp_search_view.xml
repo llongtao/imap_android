@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cp_search_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:padding="14dp"
+    tools:showIn="@layout/cp_dialog_city_picker">
+    <LinearLayout
+        android:id="@+id/ll_et"
+        android:padding="3dp"
+        android:background="@drawable/cp_grid_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/cp_search_box"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="搜索.."
+        android:maxLength="20"
+        android:maxLines="1"
+        android:textCursorDrawable="@null"
+        android:textColor="#58565C"
+        android:textColorHint="#DECCFC"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:id="@+id/cp_clear_all"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/cp_icon_clear_all" />
+
+    <Space
+        android:layout_width="2dp"
+        android:layout_gravity="bottom"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="16dp"
+        android:background="@color/cp_color_gray_light"/>
+
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/cp_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cp_cancel"
+        android:textColor="#999999"
+        android:textSize="14dp" />
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:src="@mipmap/imap_back_right"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
