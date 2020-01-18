@@ -2,14 +2,8 @@
 
 安卓端运行录屏展示：
 
-<table border="1">
-  <tr>
-    <td width='50%'>![image](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg)</td>
-    <td width='50%'>$100</td>
-  </tr>
-</table>
-
 <img width="48%" src="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg"  alt="显示图片" />
+<img width="48%" src="https://imaptest.oss-cn-beijing.aliyuncs.com/show/3.jpg"  alt="显示图片" />
 
 ![image](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg)
 [![Watch the video](https://imaptest.oss-cn-beijing.aliyuncs.com/show/WechatIMG3.jpg)](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4)
