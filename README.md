@@ -3,7 +3,7 @@
 <br/>
 ##安卓端-录屏视频（点击图片跳转到视频）：
 <br/><br/>
-<img src="https://github.com/JackLongma/imap_android/blob/master/1579343369638.gif"  alt="显示图片" />
+<img src="https://github.com/JackLongma/imap_android/blob/master/1579343006009.gif"  alt="显示图片" />
 
 #安卓端运行时截图&&录屏：
 #安卓端运行时截图&&录屏：
