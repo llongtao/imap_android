@@ -2,6 +2,10 @@
 
 # remusic
 仿网易云音乐安卓版客户端
+![](https://github.com/JackLongma/imap_android/blob/master/1.jpg)
+![](https://github.com/JackLongma/imap_android/blob/master/3.jpg)
+![](https://github.com/JackLongma/imap_android/blob/master/1.jpg)
+![](https://github.com/JackLongma/imap_android/blob/master/3.jpg)
 
 <img width="48%" src="https://github.com/JackLongma/imap_android/blob/master/1.jpg"  alt="显示图片" />
 <img width="48%" src="https://github.com/JackLongma/imap_android/blob/master/3.jpg"  alt="显示图片" />
