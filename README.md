@@ -4,6 +4,7 @@
 ##安卓端-录屏视频：
 <br/><br/>
 <img src ="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579343006009.gif" alt ="gif图片"/>
+<br/><br/>
 <img src="https://github.com/JackLongma/imap_android/blob/master/1579343006009.gif"  alt="显示图片" />
 
 #安卓端运行时截图&&录屏：
