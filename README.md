@@ -9,7 +9,7 @@
   </tr>
 </table>
 
-<img src="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg"  alt="显示图片" />
+<img width="48%" src="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg"  alt="显示图片" />
 
 ![image](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg)
 [![Watch the video](https://imaptest.oss-cn-beijing.aliyuncs.com/show/WechatIMG3.jpg)](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4)
