@@ -9,13 +9,10 @@
   </tr>
 </table>
 
-<iframe 
-    width="800" 
-    height="450" 
-    src="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4"
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
-
+<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+  <source id="mp4" src="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4" type="video/mp4"/>
+  </video>
+  
+  
 ![image](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg)
 [![Watch the video](https://imaptest.oss-cn-beijing.aliyuncs.com/show/WechatIMG3.jpg)](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4)
