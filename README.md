@@ -9,5 +9,7 @@
   </tr>
 </table>
 
+<video src="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video>
+
 ![image](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1.jpg)
 [![Watch the video](https://imaptest.oss-cn-beijing.aliyuncs.com/show/WechatIMG3.jpg)](https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579336917262884.mp4)
