@@ -1,8 +1,9 @@
 #这款社交软件内部包含 即时通讯、图文+视频分享、点赞评论回复等功能
 <br/>
 <br/>
-##安卓端-录屏视频（点击图片跳转到视频）：
+##安卓端-录屏视频：
 <br/><br/>
+<img src ="https://imaptest.oss-cn-beijing.aliyuncs.com/show/1579343006009.gif" alt ="gif图片"/>
 <img src="https://github.com/JackLongma/imap_android/blob/master/1579343006009.gif"  alt="显示图片" />
 
 #安卓端运行时截图&&录屏：
