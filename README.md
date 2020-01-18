@@ -4,9 +4,7 @@
 <img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/1.jpg"  alt="显示图片" />
 <img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/2.jpg"  alt="显示图片" />
 <img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/3.jpg"  alt="显示图片" />
-<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/11562773226_.pic.jpg"  alt="显示图片" />
 <img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG.jpg"  alt="显示图片" />
-<img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG3.jpeg"  alt="显示图片" />
 <img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG3.jpg"  alt="显示图片" />
 <img width="60%" src="https://github.com/JackLongma/imap_android/blob/master/WechatIMG4.jpeg"  alt="显示图片" />
 
