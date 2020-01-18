@@ -4,6 +4,10 @@
 
 <table border="1">
   <tr>
+    <th width="50%"></th>
+    <th width="50%"></th>
+  </tr>  
+  <tr>
     <td width='50%'>January</td>
     <td width='50%'>$100</td>
   </tr>
